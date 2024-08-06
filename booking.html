@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sign Up - Luxurious Travel & Tour</title>
+    <title>Luxurious Travel & Tour</title>
     <link rel="stylesheet" href="assets/css/style.css">
 </head>
 <body>
@@ -37,21 +37,35 @@
     </header>
     <main>
         <section>
-            <h2>Sign Up</h2>
+            <h2>Booking</h2>
             <form action="#" method="post">
-                <label for="name">Name:</label>
-                <input type="text" id="name" name="name" required>
+                <label for="travel-type">Travel Type:</label>
+                <select id="travel-type" name="travel-type" required>
+                    <option value="individual">Individual</option>
+                    <option value="group">Group</option>
+                </select>
                 
-                <label for="email">Email:</label>
-                <input type="email" id="email" name="email" required>
+                <div id="group-type-section" style="display: none;">
+                    <label for="group-type">Group Type:</label>
+                    <select id="group-type" name="group-type">
+                        <option value="school">School</option>
+                        <option value="friends">Friends</option>
+                        <option value="church">Church</option>
+                        <option value="organization">Organization</option>
+                        <option value="fun-club">Fun Club</option>
+                        <option value="other">Other</option>
+                    </select>
+                    <label for="group-members">Number of Group Members:</label>
+                    <input type="number" id="group-members" name="group-members" min="1">
+                </div>
                 
-                <label for="password">Password:</label>
-                <input type="password" id="password" name="password" required>
+                <label for="departure-date">Departure Date:</label>
+                <input type="date" id="departure-date" name="departure-date" required>
                 
-                <label for="confirm-password">Confirm Password:</label>
-                <input type="password" id="confirm-password" name="confirm-password" required>
+                <label for="days">Number of Days:</label>
+                <input type="number" id="days" name="days" min="7" required>
                 
-                <button type="submit">Sign Up</button>
+                <button type="submit">Book Now</button>
             </form>
         </section>
     </main>

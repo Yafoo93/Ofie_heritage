@@ -75,7 +75,7 @@ h1 {
 }
 
 .hero {
-    background-image: url('C:/Users/Kassim Mutawakil/Desktop/Bill_website/assets/images/travel.jpg');
+    background-image: url('C:/Users/Kassim Mutawakil/Desktop/Bill_website/assets/images/kakum4.WEBP');
     background-size: cover;
     background-position: center;
     padding: 5rem 2rem;
@@ -103,7 +103,8 @@ h1 {
 }
 
 .cta-button:hover {
-    background-color: #ffa843;
+    background-color: #ffcc00;
+    color: #2a2928;
 }
 
 main {
@@ -159,5 +160,145 @@ article p {
 
 .read-more:hover {
     background-color: #ffa843;
+}
+
+/* Form Styles */
+
+form {
+    background-color: #fff;
+    padding: 2rem;
+    margin: 2rem auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    max-width: 500px;
+    text-align: left;
+}
+
+form label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: bold;
+}
+
+form input[type="text"],
+form input[type="email"],
+form input[type="password"] {
+    width: calc(100% - 1rem);
+    padding: 0.5rem;
+    margin-bottom: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1rem;
+}
+
+form button {
+    background-color: #ffcc00;
+    color: #333;
+    padding: 0.75rem 1.5rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+}
+
+form button:hover {
+    background-color: #e6b800;
+}
+/* Form Styles */
+form {
+    background-color: #fff;
+    padding: 2rem;
+    margin: 2rem auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    max-width: 500px;
+    text-align: left;
+}
+
+form label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: bold;
+}
+
+form input[type="text"],
+form input[type="email"],
+form input[type="password"],
+form input[type="date"],
+form input[type="number"],
+form select {
+    width: calc(100% - 1rem);
+    padding: 0.5rem;
+    margin-bottom: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1rem;
+}
+
+form button {
+    background-color: #ffcc00;
+    color: #333;
+    padding: 0.75rem 1.5rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+}
+
+form button:hover {
+    background-color: #e6b800;
+}
+/* Tourist Sites Page Styles */
+article {
+    background-color: #fff;
+    padding: 1.5rem;
+    margin: 1rem auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    max-width: 800px;
+    text-align: left;
+}
+
+article h3 {
+    font-size: 1.8rem;
+    margin-bottom: 0.5rem;
+}
+
+article img {
+    max-width: 100%;
+    border-radius: 10px;
+    margin-bottom: 1rem;
+}
+
+article p {
+    font-size: 1.1rem;
+    margin-bottom: 1rem;
+}
+
+/* Accommodation Page Styles */
+article {
+    background-color: #fff;
+    padding: 1.5rem;
+    margin: 1rem auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    max-width: 800px;
+    text-align: left;
+}
+
+article h3 {
+    font-size: 1.8rem;
+    margin-bottom: 0.5rem;
+}
+
+article img {
+    max-width: 100%;
+    border-radius: 10px;
+    margin-bottom: 1rem;
+}
+
+article p {
+    font-size: 1.1rem;
+    margin-bottom: 1rem;
 }
 
