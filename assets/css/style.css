@@ -7,16 +7,103 @@ body {
     background-color: #f5f5f5;
 }
 
-header, footer {
+header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background-color: #333;
+        color: #fff;
+        padding: 1rem 2rem;
+}
+.main_header{
+    text-align: center;
+    padding: 1rem 0;
+}
+.logo{
+    display: flex;
+    align-items: center;
+}
+
+footer {
     background-color: #333;
     color: #fff;
     text-align: center;
     padding: 1rem 0;
 }
 
+header nav ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+header nav ul li {
+    display: inline;
+    margin: 0 15px;
+}
+
+header nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: 400;
+}
+header nav ul li a:hover {
+    background-color: #fff;
+    color: #333;
+    border-radius: 25%;
+    padding: 4px;
+}
+header div ul {
+    list-style-type: none;
+}
+header div ul li {
+    display: inline;
+}
+.register a {
+    color: #fff;
+    text-decoration: none;
+    padding: 0.5rem 1rem;
+    border: 1px solid #fff;
+    border-radius: 5px;
+}
+.register a:hover {
+    background-color: #fff;
+    color: #333;
+}
 h1 {
     font-size: 2.5rem;
     margin: 0;
+}
+
+.hero {
+    background-image: url('C:/Users/Kassim Mutawakil/Desktop/Bill_website/assets/images/travel.jpg');
+    background-size: cover;
+    background-position: center;
+    padding: 5rem 2rem;
+    text-align: center;
+    color: #fff;
+}
+
+.hero h2 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+.hero p {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+}
+
+.cta-button {
+    background-color: #ffa843;
+    color: #333;
+    padding: 0.75rem 1.5rem;
+    text-decoration: none;
+    font-size: 1.2rem;
+    border-radius: 5px;
+}
+
+.cta-button:hover {
+    background-color: #ffa843;
 }
 
 main {
@@ -25,7 +112,7 @@ main {
 }
 
 section {
-    background-color: #fff;
+    background-color: #f9fafc;
     padding: 2rem;
     margin: 1rem auto;
     border-radius: 10px;
@@ -37,3 +124,40 @@ p {
     font-size: 1.2rem;
     line-height: 1.6;
 }
+/*blg styling*/
+article {
+    background-color: #fff;
+    padding: 1.5rem;
+    margin: 1rem auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    max-width: 800px;
+}
+
+article h3 {
+    font-size: 1.8rem;
+    margin-bottom: 0.5rem;
+}
+
+article p {
+    font-size: 1.1rem;
+    margin-bottom: 1rem;
+}
+
+.read-more {
+    background-color: #ffa843;
+    color: #333;
+    padding: 0.75rem 1.5rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+    display: inline-block;
+    margin-top: 1rem;
+    text-align: center;
+}
+
+.read-more:hover {
+    background-color: #ffa843;
+}
+
