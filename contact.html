@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sign In - Luxurious Travel & Tour</title>
+    <title>Luxurious Travel & Tour</title>
     <link rel="stylesheet" href="assets/css/style.css">
 </head>
 <body>
@@ -38,15 +38,18 @@
     </header>
     <main>
         <section>
-            <h2>Sign In</h2>
+            <h2>Contact Us</h2>
             <form action="#" method="post">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+                
                 <label for="email">Email:</label>
                 <input type="email" id="email" name="email" required>
                 
-                <label for="password">Password:</label>
-                <input type="password" id="password" name="password" required>
+                <label for="message">Message:</label>
+                <textarea id="message" name="message" rows="5" required></textarea>
                 
-                <button type="submit">Sign In</button>
+                <button type="submit">Send Message</button>
             </form>
         </section>
     </main>
@@ -54,12 +57,5 @@
         <p>&copy; 2024 Luxurious Travel & Tour</p>
     </footer>
     <script src="assets/js/script.js"></script>
-    <script>
-        document.getElementById('signin-form').addEventListener('submit', function(event) {
-            event.preventDefault();
-            localStorage.setItem('isLoggedIn', 'true');
-            window.location.href = 'index.html';
-        });
-    </script>
 </body>
 </html>

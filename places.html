@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sign In - Luxurious Travel & Tour</title>
+    <title>Luxurious Travel & Tour</title>
     <link rel="stylesheet" href="assets/css/style.css">
 </head>
 <body>
@@ -38,28 +38,22 @@
     </header>
     <main>
         <section>
-            <h2>Sign In</h2>
-            <form action="#" method="post">
-                <label for="email">Email:</label>
-                <input type="email" id="email" name="email" required>
-                
-                <label for="password">Password:</label>
-                <input type="password" id="password" name="password" required>
-                
-                <button type="submit">Sign In</button>
-            </form>
+            <h2>Beautiful Places in Ghana</h2>
+            <article>
+                <h3>Wli Waterfalls</h3>
+                <img src="assets/images/wli-waterfalls.jpg" alt="Wli Waterfalls">
+                <p>Wli Waterfalls, located in the Volta Region, is the highest waterfall in Ghana and West Africa. It's a must-visit natural attraction.</p>
+            </article>
+            <article>
+                <h3>Lake Bosomtwe</h3>
+                <img src="assets/images/lake-bosomtwe.jpg" alt="Lake Bosomtwe">
+                <p>Lake Bosomtwe, a meteorite-impact crater lake, is surrounded by lush forests and quaint villages. It's a serene and picturesque spot.</p>
+            </article>
         </section>
     </main>
     <footer>
         <p>&copy; 2024 Luxurious Travel & Tour</p>
     </footer>
     <script src="assets/js/script.js"></script>
-    <script>
-        document.getElementById('signin-form').addEventListener('submit', function(event) {
-            event.preventDefault();
-            localStorage.setItem('isLoggedIn', 'true');
-            window.location.href = 'index.html';
-        });
-    </script>
 </body>
 </html>

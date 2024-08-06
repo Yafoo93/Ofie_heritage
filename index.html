@@ -16,7 +16,8 @@
         <div class="main_header">
             <h1>Ofie Heritage Tours</h1>
             <nav>
-                <ul>
+                <button class="menu-toggle" onclick="toggleMenu()">☰ Menu</button>
+                <ul id="nav-links" class="nav-links">
                     <li><a href="index.html">Home</a></li>
                     <li><a href="tourist-sites.html">Tourist Sites</a></li>
                     <li><a href="accommodation.html">Accommodation</a></li>
@@ -25,12 +26,11 @@
                     <li><a href="blog.html">Blog</a></li>
                     <li><a href="contact.html">Contact</a></li>
                 </ul>
-       
             </nav>
         </div>
         <div class="register">
             <ul>
-                <li><a href="signup.html">SIGN UP</a></li>
+                <li><a href="signup.html" id="signup">SIGN UP</a></li>
                 <li><a href="signin.html">SIGN IN</a></li>
                 <li><a href="#" id="logout-link" style="display: none;">Logout</a></li>
             </ul>
@@ -43,6 +43,51 @@
             <a href="booking.html" class="cta-button">Book Now</a>
         </section>
     </main>
+    <center><h2>Blog</h2></center>
+    <section1 class="homeblog">
+        
+        <article>
+            <h3>Benefits of Touring Ghana</h3>
+            <p>Discover the rich culture, beautiful landscapes, and warm hospitality of Ghana...</p>
+            <button onclick="location.href='post1.html'" class="read-more">Read More</button>
+        </article>
+        <article>
+            <h3>Top Tourist Sites in Ghana</h3>
+            <p>Explore the most popular tourist destinations in Ghana, including historical landmarks...</p>
+            <button onclick="location.href='post2.html'" class="read-more">Read More</button>
+
+        </article>
+    </section1>
+    <center><h2>Beautiful Places To Visit In Ghana</h2></center>
+    <section1 class="homeblog">
+        
+        <article>
+            <h3>Benefits of Touring Ghana</h3>
+            <p>Discover the rich culture, beautiful landscapes, and warm hospitality of Ghana...</p>
+            <button onclick="location.href='post1.html'" class="read-more">Read More</button>
+        </article>
+        <article>
+            <h3>Top Tourist Sites in Ghana</h3>
+            <p>Explore the most popular tourist destinations in Ghana, including historical landmarks...</p>
+            <button onclick="location.href='post2.html'" class="read-more">Read More</button>
+
+        </article>
+    </section1>
+    <center><h2>Accomodations</h2></center>
+    <section1 class="homeblog">
+        
+        <article>
+            <h3>Benefits of Touring Ghana</h3>
+            <p>Discover the rich culture, beautiful landscapes, and warm hospitality of Ghana...</p>
+            <button onclick="location.href='post1.html'" class="read-more">Read More</button>
+        </article>
+        <article>
+            <h3>Top Tourist Sites in Ghana</h3>
+            <p>Explore the most popular tourist destinations in Ghana, including historical landmarks...</p>
+            <button onclick="location.href='post2.html'" class="read-more">Read More</button>
+
+        </article>
+    </section1>
     <footer>
         <p>&copy; 2024 Luxurious Travel & Tour</p>
     </footer>
