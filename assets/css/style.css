@@ -157,19 +157,31 @@ p {
     font-size: 1.2rem;
     line-height: 1.6;
 }
+
 .homeblog {
     display: flex;
-    justify-content: space-evenly;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 20px; /* Add some gap between the articles */
 }
 
 /* Blog styling */
 article {
     background-color: #fff;
     padding: 1.5rem;
-    margin: 1rem auto;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    max-width: 800px;
+    width: calc(50% - 20px); /* Make each article take 50% of the container width minus gap */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: left;
+}
+
+article img {
+    max-width: 100%;
+    border-radius: 10px;
+    margin-bottom: 1rem;
 }
 
 article h3 {
@@ -191,7 +203,8 @@ article p {
     cursor: pointer;
     font-size: 1rem;
     display: inline-block;
-    margin-top: 1rem;
+    margin-top: auto; /* Push the button to the bottom */
+    align-self: flex-end; /* Align the button to the bottom right */
     text-align: center;
 }
 
@@ -352,8 +365,80 @@ form button:hover {
     background-color: #e6b800;
 }
 
+/*Footer Style*/
+footer {
+    background-color: #333;
+    color: #fdfd1e;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 1rem 2rem;
+    flex-wrap: wrap;
+}
 
-/* Media queries for larger screens */
+.footer-left,
+.footer-right {
+    flex: 1;
+}
+
+.footer-left ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10%;
+    margin-right: 20%;
+    font-size: larger;
+    font-weight: 400;
+}
+
+.footer-left ul li {
+    margin-bottom: 0.5rem;
+}
+
+.footer-left ul li a {
+    color: #e9f10a;
+    text-decoration: none;
+}
+
+.footer-left ul li a:hover {
+    text-decoration: underline;
+}
+.footer-right {
+    margin-top: 3.5%;
+}
+
+.footer-right p {
+    margin: 0.5rem 0;
+    text-align: start;
+    margin-left: 30%;
+}
+
+.footer-right a {
+    color: #ebf70f;
+    text-decoration: none;
+    
+}
+
+.footer-right a:hover {
+    text-decoration: underline;
+}
+
+.footer-right img {
+    margin-right: 10px;
+    vertical-align: middle;
+    padding-top: 5%;
+}
+
+.footer-bottom {
+    width: 100%;
+    text-align: center;
+    margin-top: 1rem;
+}
+
+
+/* Media queries for smaller screens */
 @media (max-width: 768px) {
     header {
         flex-direction: column;
@@ -410,6 +495,22 @@ form button:hover {
     .homeblog {
         display: block;
         justify-content: space-evenly;
+    }
+    .footer-left {
+        display: none; /* Hide navigation links on small screens */
+    }
+
+    .footer-right,
+    .footer-bottom {
+        flex: 100%;
+        text-align: center;
+        margin: 0.5rem 0;
+    }
+
+    footer {
+        flex-direction: column;
+        align-items: flex-start;
+        padding-left: 1rem; 
     }
 }
 @media (min-width: 769px) {

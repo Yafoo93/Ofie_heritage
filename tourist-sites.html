@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Luxurious Travel & Tour</title>
     <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 <body>
     <header>
@@ -16,7 +17,8 @@
         <div class="main_header">
             <h1>Ofie Heritage Tours</h1>
             <nav>
-                <ul>
+                <button class="menu-toggle" onclick="toggleMenu()">☰ Menu</button>
+                <ul id="nav-links" class="nav-links">
                     <li><a href="index.html">Home</a></li>
                     <li><a href="tourist-sites.html">Tourist Sites</a></li>
                     <li><a href="accommodation.html">Accommodation</a></li>
@@ -25,12 +27,11 @@
                     <li><a href="blog.html">Blog</a></li>
                     <li><a href="contact.html">Contact</a></li>
                 </ul>
-       
             </nav>
         </div>
         <div class="register">
             <ul>
-                <li><a href="signup.html">SIGN UP</a></li>
+                <li><a href="signup.html" id="signup">SIGN UP</a></li>
                 <li><a href="signin.html">SIGN IN</a></li>
                 <li><a href="#" id="logout-link" style="display: none;">Logout</a></li>
             </ul>
@@ -52,34 +53,32 @@
         </section>
     </main>
     <footer>
-        <footer>
-            <div class="footer-left">
-                <ul>
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="tourist-sites.html">Tourist Sites</a></li>
-                    <li><a href="accommodation.html">Accommodation</a></li>
-                    <li><a href="food.html">Food</a></li>
-                    <li><a href="beautiful-places.html">Beautiful Places</a></li>
-                    <li><a href="blog.html">Blog</a></li>
-                    <li><a href="contact.html">Contact</a></li>
-                </ul>
-            </div>
-            <div class="footer-right">
-                <p><strong>Ghana Contact:</strong> <a href="tel:+233123456789">+233 123 456 789 (Call or WhatsApp)</a></p>
-                <p><strong>US Contact:</strong> <a href="tel:+11234567890">+1 123 456 7890 (Call or WhatsApp)</a></p>
-                <p><strong>Email:</strong> <a href="mailto:info@ofieheritagetours.com">info@ofieheritagetours.com</a></p>
-                <p>
-                    <a href="https://facebook.com" target="_blank"><img src="assets/icons/facebook.png" alt="Facebook" width="24" height="24"></a>
-                    <a href="https://instagram.com" target="_blank"><img src="assets/icons/instagram.png" alt="Instagram" width="24" height="24"></a>
-                    <a href="https://twitter.com" target="_blank"><img src="assets/icons/twitter.png" alt="Twitter" width="24" height="24"></a>
-                    <a href="https://tiktok.com" target="_blank"><img src="assets/icons/tiktok.png" alt="TikTok" width="24" height="24"></a>
-                </p>
-            </div>
-            <div class="footer-bottom">
-                <p>&copy; 2024 Luxurious Travel & Tour</p>
-            </div>
-        </footer>
-        
+        <div class="footer-left">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="tourist-sites.html">Tourist Sites</a></li>
+                <li><a href="accommodation.html">Accommodation</a></li>
+                <li><a href="food.html">Food</a></li>
+                <li><a href="places.html">Beautiful Places</a></li>
+                <li><a href="blog.html">Blog</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </div>
+        <div class="footer-right">
+            <p><strong>Call or WhatsApp:</strong> <a href="tel:+233249220015">+233 249 220 015 (Ghana)</a></p>
+            <p><strong>Call or WhatsApp:</strong> <a href="tel:+11234567890">+1 929-789-1300  (USA)</a></p>
+            <p><strong>Email:</strong> <a href="mailto:info@ofieheritagetours.com">info@ofieheritagetours.com</a></p>
+            <p>
+                <i class="fa-brands fa-facebook">facebook</i>
+                <i class="fa-brands fa-instagram">instagram</i>
+                <i class="fa-brands fa-twitter">twitter</i>
+                <i class="fa-brands fa-tiktok">TikTok</i>
+            </p>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; Ofie Heritage Tours</p>
+        </div>
+    
     </footer>
     <script src="assets/js/script.js"></script>
 </body>
