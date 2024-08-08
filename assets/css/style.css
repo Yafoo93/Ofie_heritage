@@ -18,6 +18,7 @@ header {
     flex-wrap: wrap;
     position: fixed;
     width: 100%;
+    margin-bottom: 30%;
 }
 
 .main_header {
@@ -105,7 +106,7 @@ h1 {
     margin: 0;
 }
 main {
-   background-image: url('/assets/images/kakum1.jpg');
+   background-image: url('/assets/images/castle.webp');
     background-size: cover;
     background-position: center;
     padding: 5%;
@@ -116,12 +117,13 @@ main {
 }
 
 .hero {
-   background-image: url('/assets/images/larabanga.WEPB');
+   background-image: url('/assets/images/kakum4.webp');
     background-size: cover;
     background-position: center;
     padding: 10rem 2rem;
     text-align: center;
     color: #fff;
+    margin-top: 10%;
 }
 
 .hero h2 {
@@ -174,7 +176,7 @@ article {
     padding: 1.5rem;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    width: calc(50% - 20px); /* Make each article take 50% of the container width minus gap */
+    /*width: calc(50% - 20px);*/
     display: flex;
     flex-direction: column;
     align-items: center;
