@@ -33,8 +33,8 @@
         <div class="register">
             <ul>
                 <li><a href="signup.html" id="signup">SIGN UP</a></li>
-                <li><a href="signin.html">SIGN IN</a></li>
-                <li><a href="#" id="logout-link" style="display: none;">Logout</a></li>
+                <li><a href="signin.html" id="signin">SIGN IN</a></li>
+                <li><a href="#" id="logout-link" style="display: none;">Sign Out</a></li>
             </ul>
         </div>
     </header>
@@ -71,14 +71,22 @@
             </ul>
         </div>
         <div class="footer-right">
-            <p><strong>Call or WhatsApp:</strong> <a href="tel:+233249220015">+233 249 220 015 (Ghana)</a></p>
-            <p><strong>Call or WhatsApp:</strong> <a href="tel:+11234567890">+1 929-789-1300  (USA)</a></p>
-            <p><strong>Email:</strong> <a href="mailto:info@ofieheritagetours.com">info@ofieheritagetours.com</a></p>
+            <p><span class="number"><strong>Call or WhatsApp:</strong></span> <span class="number"><a href="tel:+233249220015">+233 249 220 015 (Ghana)</a></span>
+            <p><span class="number"><strong>Call or WhatsApp:</strong></span> <span class="number"><a href="tel:+11234567890">+1 929-789-1300  (USA)</a></span>
+            <p><strong>Email:</strong> <a href="mailto:info@ofieheritagetours.com">info@ofieheritagetours.com</a>
             <p>
-                <i class="fa-brands fa-facebook">facebook</i>
-                <i class="fa-brands fa-instagram">instagram</i>
-                <i class="fa-brands fa-twitter">twitter</i>
-                <i class="fa-brands fa-tiktok">TikTok</i>
+                <a href="https://facebook.com/yourprofile" target="_blank" title="Facebook">
+                    <img src="assets/images/facebook.png" alt="Facebook" width="20" height="20">
+                    <span class="social-label">Ofie Heritage</span>
+                </a>
+                <a href="https://facebook.com/yourprofile" target="_blank" title="instagram" width="20" height="20">
+                    <img src="assets/images/instagram.png" alt="instagram" class="icon" width="20" height="20">
+                    <span class="social-label">ofieheritage_gh</span>
+                </a>
+                <a href="https://facebook.com/yourprofile" target="_blank" title="tiktok" width="20" height="20">
+                    <img src="assets/images/tiktok.png" alt="tiktok" class="icon" width="20" height="20">
+                    <span class="social-label">ofie.heritage.gh</span>
+                </a>
             </p>
         </div>
         <div class="footer-bottom">
@@ -86,7 +94,80 @@
         </div>
     
     </footer>
+    <script>
+        document.querySelector('form').addEventListener('submit', function(event) {
+            event.preventDefault();
+    
+            const name = document.getElementById('name').value;
+            const email = document.getElementById('email').value;
+            const password = document.getElementById('password').value;
+            const confirmPassword = document.getElementById('confirm-password').value;
+    
+            if (password !== confirmPassword) {
+                alert("Passwords do not match!");
+                return;
+            }
+    
+            fetch('http://localhost:5000/users/signup', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify({ name, email, password })
+            })
+            .then(response => response.json())
+            .then(data => {
+                console.log('Signup Response:', data);
+                if (data.message === 'User registered successfully') {
+                    window.location.href = 'signin.html';
+                } else {
+                    alert('Signup failed. Please try again.');
+                }
+            })
+            .catch(error => console.error('Error:', error));
+        });
+    </script>
+
     <script src="assets/js/script.js"></script>
-    <script src="assets/js/script.js"></script>
+
+    <script>
+        // Function to check authentication status and toggle buttons
+        function checkAuthStatus() {
+            const token = localStorage.getItem('authToken');
+            const signupLink = document.getElementById('signup');
+            const signinLink = document.getElementById('signin');
+            const logoutLink = document.getElementById('logout-link');
+        
+            if (token) {
+                // User is signed in
+                if (signupLink) signupLink.style.display = 'none';
+                if (signinLink) signinLink.style.display = 'none';
+                if (logoutLink) logoutLink.style.display = 'inline';
+            } else {
+                // User is signed out
+                if (signupLink) signupLink.style.display = 'inline';
+                if (signinLink) signinLink.style.display = 'inline';
+                if (logoutLink) logoutLink.style.display = 'none';
+            }
+        }
+        
+        // Function to sign out the user
+        function signOut() {
+            localStorage.removeItem('authToken'); // Remove the token from local storage
+            checkAuthStatus(); // Update the button visibility
+            window.location.href = 'index.html'; // Redirect to the home page
+        }
+        
+        // Attach the signout function to the logout link
+        document.getElementById('logout-link').addEventListener('click', function(event) {
+            event.preventDefault();
+            signOut();
+        });
+        
+        // Check authentication status on page load
+        window.onload = checkAuthStatus;
+        </script>
+               
+
 </body>
 </html>
