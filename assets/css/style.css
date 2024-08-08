@@ -105,7 +105,7 @@ h1 {
     margin: 0;
 }
 main {
-   background-image: url('Bill_website/assets/images/kakum1.jpg');
+   background-image: url('/assets/images/kakum1.jpg');
     background-size: cover;
     background-position: center;
     padding: 5%;
@@ -116,7 +116,7 @@ main {
 }
 
 .hero {
-   background-image: url('Bill_website/assets/images/larabanga.WEPB');
+   background-image: url('/assets/images/larabanga.WEPB');
     background-size: cover;
     background-position: center;
     padding: 10rem 2rem;
