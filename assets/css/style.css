@@ -1,4 +1,28 @@
 /* Base styles */
+/* Preloader styles */
+#preloader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #ffffff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+}
+
+/* Custom loader image */
+.custom-loader {
+    width: 100px;
+    height: 100px;
+}
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
 body {
     font-family: 'Times New Roman', Times, serif;
     color: #333;
@@ -167,7 +191,7 @@ p {
 
 .homeblog {
     flex-wrap: wrap;
-    gap: 10px; /* Add some gap between the articles */
+    gap: 10px;
 }
 
 /* Blog styling */
@@ -176,7 +200,6 @@ article {
     padding: 1.5rem;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    /*width: calc(50% - 20px);*/
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -208,8 +231,8 @@ article p {
     cursor: pointer;
     font-size: 1rem;
     display: inline-block;
-    margin-top: auto; /* Push the button to the bottom */
-    align-self: flex-end; /* Align the button to the bottom right */
+    margin-top: auto; 
+    align-self: flex-end;
     text-align: center;
 }
 
@@ -319,6 +342,10 @@ article p {
 /* Responsive navigation menu */
 .nav-links {
     display: none;
+    padding-left: 15%;
+    padding-top: 2%;
+    font-size: larger;
+    font-weight: bold;
 }
 
 .menu-toggle {
@@ -462,6 +489,10 @@ footer {
     header {
         flex-direction: column;
         align-items: flex-start;
+        margin-bottom: 10%;
+    }
+    .hero{
+        margin-top: 20%;
     }
 
     .main_header {
@@ -480,6 +511,7 @@ footer {
         align-self: flex-end;
         margin-top: -50px; 
         margin-bottom: 20px; 
+        padding-right: 5%;
     }
 
     .header-right {
@@ -516,7 +548,7 @@ footer {
         justify-content: space-evenly;
     }
     .footer-left {
-        display: none; /* Hide navigation links on small screens */
+        display: none;
     }
 
     .footer-right,
@@ -535,6 +567,9 @@ footer {
         margin-right: 1px;
         vertical-align: middle;
         padding-top: 5%;
+    }
+    .sociala {
+        display: block;
     }
     
     .footer-bottom {

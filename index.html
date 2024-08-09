@@ -9,6 +9,9 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 <body>
+    <div id="preloader">
+        <img src="assets/images/logo3.png" alt="Loading..." class="custom-loader">
+    </div>
     <header>
         <div class="logo">
             <a href="index.html">
@@ -17,12 +20,11 @@
         </div>
         <div class="main_header">
             <h1>Ofie Heritage Tours</h1>
-            <nav>
+            <nav class="top-links">
                 <button class="menu-toggle" onclick="toggleMenu()">☰ Menu</button>
                 <ul id="nav-links" class="nav-links">
                     <li><a href="index.html">Home</a></li>
                     <li><a href="tourist-sites.html">Tourist Sites</a></li>
-                    <li><a href="accommodation.html">Accommodation</a></li>
                     <li><a href="food.html">Food</a></li>
                     <li><a href="places.html">Beautiful Places</a></li>
                     <li><a href="blog.html">Blog</a></li>
@@ -48,7 +50,7 @@
     <center><h2>Blog</h2></center>
     <section class="homeblog">
         <article>
-            <img src="assets/images/culture.jpg" alt="Touring Ghana" width="300" height="200">
+            <img src="assets/images/culture2.jpg" alt="Touring Ghana">
             <h3>Benefits of Touring Ghana</h3>
             <p>Discover the rich culture, beautiful landscapes, and warm hospitality of Ghana...</p>
             <button onclick="location.href='posts/post6.html'" class="read-more">Read More</button>
@@ -100,7 +102,6 @@
                 <ul>
                     <li><a href="index.html">Home</a></li>
                     <li><a href="tourist-sites.html">Tourist Sites</a></li>
-                    <li><a href="accommodation.html">Accommodation</a></li>
                     <li><a href="food.html">Food</a></li>
                     <li><a href="places.html">Beautiful Places</a></li>
                     <li><a href="blog.html">Blog</a></li>
@@ -111,7 +112,7 @@
                 <p><span class="number"><strong>Call or WhatsApp:</strong></span> <span class="number"><a href="tel:+233249220015">+233 249 220 015 (Ghana)</a></span>
                 <p><span class="number"><strong>Call or WhatsApp:</strong></span> <span class="number"><a href="tel:+11234567890">+1 929-789-1300  (USA)</a></span>
                 <p><strong>Email:</strong> <a href="mailto:info@ofieheritagetours.com">info@ofieheritagetours.com</a>
-                <p>
+                <p><pan class="sociala">
                     <a href="https://facebook.com/yourprofile" target="_blank" title="Facebook">
                         <img src="assets/images/facebook.png" alt="Facebook" width="20" height="20">
                         <span class="social-label">Ofie Heritage</span>
@@ -124,13 +125,31 @@
                         <img src="assets/images/tiktok.png" alt="tiktok" class="icon" width="20" height="20">
                         <span class="social-label">ofie.heritage.gh</span>
                     </a>
-                </p>
+                </pan></p>
             </div>
             <div class="footer-bottom">
                 <p>&copy; Ofie Heritage Tours</p>
             </div>
         
     </footer>
+    <script>
+    window.addEventListener('load', function() {
+        const preloader = document.getElementById('preloader');
+        preloader.style.display = 'none';
+    });
+    </script>
+
+    <script>
+            window.addEventListener('load', function() {
+        const preloader = document.getElementById('preloader');
+        preloader.style.opacity = '0';
+        setTimeout(function() {
+            preloader.style.display = 'none';
+        }, 1000);
+    });
+
+    </script>
+
     <script>
         // Function to check authentication status and toggle buttons
         function checkAuthStatus() {
