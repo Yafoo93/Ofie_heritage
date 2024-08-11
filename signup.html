@@ -106,7 +106,7 @@
                 return;
             }
     
-            fetch('http://localhost:5000/users/signup', {
+            fetch('https://ofietours.herokuapp.com/users/signup', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
@@ -116,15 +116,21 @@
             .then(response => response.json())
             .then(data => {
                 console.log('Signup Response:', data);
-                if (data.message === 'User registered successfully') {
+                if (response.ok) {
+                    // Redirect to the signin page after successful signup
+                    alert('User registered successfully!');
                     window.location.href = 'signin.html';
                 } else {
-                    alert('Signup failed. Please try again.');
+                    alert(`Signup failed: ${data.error || 'Please try again.'}`);
                 }
             })
-            .catch(error => console.error('Error:', error));
+            .catch(error => {
+                console.error('Error:', error);
+                alert('An error occurred. Please try again.');
+            });
         });
     </script>
+    
 
     <script src="assets/js/script.js"></script>
 
