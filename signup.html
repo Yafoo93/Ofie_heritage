@@ -104,7 +104,7 @@
                 return;
             }
     
-            fetch('https://ofietours.herokuapp.com/users/signup', {
+            fetch('https://your-vercel-backend-url.vercel.app/users/signup', {  // Replace with your actual Vercel URL
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
@@ -115,7 +115,6 @@
             .then(data => {
                 console.log('Signup Response:', data);
                 if (response.ok) {
-                    // Redirect to the signin page after successful signup
                     alert('User registered successfully!');
                     window.location.href = 'signin.html';
                 } else {
@@ -127,7 +126,7 @@
                 alert('An error occurred. Please try again.');
             });
         });
-    </script>
+    </script>    
     
 
     <script src="assets/js/script.js"></script>

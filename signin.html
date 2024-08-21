@@ -105,7 +105,7 @@
         const email = document.getElementById('email').value;
         const password = document.getElementById('password').value;
 
-        fetch('https://ofietours.herokuapp.com/users/signin', {
+        fetch('https://your-vercel-backend-url.vercel.app/users/signin', {  // Replace with your actual Vercel URL
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
@@ -117,12 +117,16 @@
             console.log('Signin Response:', data);
             if (data.token) {
                 localStorage.setItem('authToken', data.token);
+                alert('Signin successful! Redirecting to homepage.');
                 window.location.href = 'index.html';
             } else {
                 alert('Signin failed. Please check your credentials.');
             }
         })
-        .catch(error => console.error('Error:', error));
+        .catch(error => {
+            console.error('Error:', error);
+            alert('An error occurred. Please try again.');
+        });
     });
 </script>
 

@@ -110,14 +110,14 @@
             event.preventDefault();
     
             const travelType = document.getElementById('travel-type').value;
-            const groupType = document.getElementById('group-type').value;
-            const groupMembers = document.getElementById('group-members').value;
+            const groupType = document.getElementById('group-type') ? document.getElementById('group-type').value : '';
+            const groupMembers = document.getElementById('group-members') ? document.getElementById('group-members').value : '';
             const departureDate = document.getElementById('departure-date').value;
             const days = document.getElementById('days').value;
     
             const token = localStorage.getItem('authToken');
     
-            fetch('http://localhost:5000/bookings/book', {
+            fetch('https://your-vercel-backend-url.vercel.app/bookings/book', {  // Replace with your actual Vercel URL
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
@@ -135,7 +135,10 @@
                     alert('Booking failed. Please try again.');
                 }
             })
-            .catch(error => console.error('Error:', error));
+            .catch(error => {
+                console.error('Error:', error);
+                alert('An error occurred. Please try again.');
+            });
         });
     
         // Toggle group type section based on travel type selection
@@ -144,6 +147,7 @@
             groupSection.style.display = this.value === 'group' ? 'block' : 'none';
         });
     </script>
+    
     
     <script src="assets/js/script.js"></script>
 </body>
